@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: #1a0f28;
+}
+
+/* Background styles */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.gradient-ball {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.8;
+  animation: float 20s infinite ease-in-out;
+}
+
+.ball-1 {
+  width: 500px;
+  height: 500px;
+  background: #6b3fa0;
+  top: -100px;
+  left: -100px;
+  animation-delay: -2s;
+}
+
+.ball-2 {
+  width: 600px;
+  height: 600px;
+  background: #4b2a7d;
+  bottom: -200px;
+  right: -100px;
+  animation-delay: -4s;
+}
+
+.ball-3 {
+  width: 400px;
+  height: 400px;
+  background: #8b4dc7;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: -6s;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    transparent,
+    rgba(26, 15, 40, 0.8)
+  );
+  z-index: -1;
+  animation: pulse 8s infinite ease-in-out;
+}
+
+/* Container and content styles */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.text {
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  max-width: 80%;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-out;
+}
+
+/* Button styles */
+.button {
+  position: relative;
+  background: linear-gradient(135deg, #8b4dc7, #6b3fa0);
+  color: white;
+  padding: 18px 45px;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(107, 63, 160, 0.4);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(107, 63, 160, 0.6);
+}
+
+.button:hover::before {
+  left: 100%;
+}
+
+.button:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(107, 63, 160, 0.4);
+}
+
+.button-text {
+  position: relative;
+  z-index: 1;
+}
+
+.button-glow {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(
+    circle,
+    rgba(139, 77, 199, 0.8) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.button:hover .button-glow {
+  opacity: 0.15;
+}
+
+/* Sparkles styles */
+.sparkles {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 10px white;
+  animation: sparkle 4s infinite linear;
+  opacity: 0;
+}
+
+.sparkle1 {
+  left: 20%;
+  top: 20%;
+  animation-delay: -1s;
+}
+.sparkle2 {
+  left: 80%;
+  top: 30%;
+  animation-delay: -2s;
+}
+.sparkle3 {
+  left: 40%;
+  top: 70%;
+  animation-delay: -3s;
+}
+.sparkle4 {
+  left: 60%;
+  top: 50%;
+  animation-delay: -4s;
+}
+.sparkle5 {
+  left: 30%;
+  top: 40%;
+  animation-delay: -5s;
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(50px, 50px) scale(1.1);
+  }
+  50% {
+    transform: translate(-30px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(20px, -50px) scale(1.05);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100px, -100px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .text {
+    font-size: 20px;
+  }
+
+  .button {
+    font-size: 18px;
+    padding: 15px 35px;
+  }
+
+  .gradient-ball {
+    filter: blur(40px);
+  }
+}
