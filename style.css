@@ -10,10 +10,9 @@ body {
   min-height: 100vh;
   overflow: hidden;
   position: relative;
-  background: #1a0f28;
+  background: #1a1b2f; /* Трохи світліший синій фон */
 }
 
-/* Background styles */
 .background {
   position: fixed;
   top: 0;
@@ -27,14 +26,14 @@ body {
   position: absolute;
   border-radius: 50%;
   filter: blur(60px);
-  opacity: 0.8;
+  opacity: 0.75;
   animation: float 20s infinite ease-in-out;
 }
 
 .ball-1 {
   width: 500px;
   height: 500px;
-  background: #6b3fa0;
+  background: #4169E1; /* Royal Blue */
   top: -100px;
   left: -100px;
   animation-delay: -2s;
@@ -43,7 +42,7 @@ body {
 .ball-2 {
   width: 600px;
   height: 600px;
-  background: #4b2a7d;
+  background: #483D8B; /* Dark Slate Blue */
   bottom: -200px;
   right: -100px;
   animation-delay: -4s;
@@ -52,7 +51,7 @@ body {
 .ball-3 {
   width: 400px;
   height: 400px;
-  background: #8b4dc7;
+  background: #7B68EE; /* Medium Slate Blue */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -68,7 +67,7 @@ body {
   background: radial-gradient(
     circle at center,
     transparent,
-    rgba(26, 15, 40, 0.8)
+    rgba(26, 27, 47, 0.85)
   );
   z-index: -1;
   animation: pulse 8s infinite ease-in-out;
@@ -99,7 +98,7 @@ body {
 /* Button styles */
 .button {
   position: relative;
-  background: linear-gradient(135deg, #8b4dc7, #6b3fa0);
+  background: linear-gradient(135deg, #a45db9, #8f2d73); /* Яскравіший градієнт */
   color: white;
   padding: 18px 45px;
   border: none;
@@ -108,7 +107,7 @@ body {
   cursor: pointer;
   overflow: hidden;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 15px rgba(107, 63, 160, 0.4);
+  box-shadow: 0 6px 15px rgba(139, 93, 185, 0.4); /* Яскравіший тінь */
 }
 
 .button::before {
@@ -166,14 +165,14 @@ body {
   opacity: 0.15;
 }
 
-/* Sparkles styles */
+/* Sparkles з більшою яскравістю */
 .sparkles {
   position: absolute;
   width: 4px;
   height: 4px;
   border-radius: 50%;
   background: white;
-  box-shadow: 0 0 10px white;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
   animation: sparkle 4s infinite linear;
   opacity: 0;
 }
@@ -204,7 +203,7 @@ body {
   animation-delay: -5s;
 }
 
-/* Animations */
+/* Animations with slightly faster timing */
 @keyframes float {
   0%,
   100% {
@@ -224,10 +223,10 @@ body {
 @keyframes pulse {
   0%,
   100% {
-    opacity: 0.8;
+    opacity: 0.85;
   }
   50% {
-    opacity: 0.6;
+    opacity: 0.7;
   }
 }
 
