@@ -1,72 +1,37 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elfbar</title>
-    <link rel="stylesheet" href="./style.css" />
-
-    <!-- Meta Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      fbq("init", "858380602795213");
-      fbq("track", "PageView");
-    </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=858380602795213&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-  </head>
-  <body>
-    <div class="background">
-      <div class="gradient-ball ball-1"></div>
-      <div class="gradient-ball ball-2"></div>
-      <div class="gradient-ball ball-3"></div>
-      <div class="gradient-overlay"></div>
-      <div class="sparkles sparkle1"></div>
-      <div class="sparkles sparkle2"></div>
-      <div class="sparkles sparkle3"></div>
-      <div class="sparkles sparkle4"></div>
-      <div class="sparkles sparkle5"></div>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELF BAR YAVORIV</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
     <div class="container">
-      <div class="text">Дивись більше асортименту в каналі</div>
-      <a
-        href="https://t.me/+YMnh52T4wHBhNTRi"
-        class="button-link"
-        target="_blank"
-      >
-        <button class="button">
-          <span class="button-text">Тисни</span>
-          <div class="button-glow"></div>
-        </button>
-      </a>
+        <div class="card">
+            <div class="logo-section">
+                <img src="./logo.png" alt="Logo" class="logo">
+                <div class="text-container">
+                  <div class="text-subContainer">
+                    <h1 class="title">ELF BAR YAVORIV</h1>
+                    <p class="description">Жижі, под-системи, ельф бари</p>
+                  </div>
+                </div>
+            </div>
+            <ul class="features">
+                <li><span>📦</span> Безкоштовна доставка від 1000 грн</li>
+                <li><span>💯</span> Тільки оригінальна продукція</li>
+                <li><span>⏰</span> Працюємо 24/7</li>
+                <li><span>🚚</span> Відправка Новою Поштою без передоплати</li>
+            </ul>
+            <a href="https://t.me/yourtelegramlink" class="telegram-btn">
+              <svg class="telegram-icon" width="20" height="20" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M52.1734 7.33825C51.3334 6.62593 50.0141 6.52401 48.6499 7.07169H48.6477C47.213 7.64737 8.03537 24.4518 6.44049 25.1384C6.15041 25.2392 3.61697 26.1845 3.87793 28.2901C4.11089 30.1885 6.14705 30.9747 6.39569 31.0654L16.3558 34.4758C17.0166 36.6755 19.4526 44.791 19.9914 46.5248C20.3274 47.6056 20.875 49.0258 21.8349 49.3181C22.6771 49.6429 23.5149 49.3461 24.057 48.9205L30.1464 43.2723L39.9766 50.9387L40.2107 51.0787C40.8782 51.3744 41.5178 51.5223 42.1282 51.5223C42.5997 51.5223 43.0522 51.4338 43.4845 51.2568C44.9573 50.652 45.5464 49.2487 45.608 49.0896L52.9507 10.9234C53.3987 8.88497 52.776 7.84785 52.1734 7.33825ZM25.14 35.84L21.78 44.8L18.42 33.6L44.18 14.56L25.14 35.84Z" fill="white"/>
+                </svg>
+              Наш Телеграм
+            </a>
+        </div>
     </div>
-  </body>
+</body>
 </html>
+
